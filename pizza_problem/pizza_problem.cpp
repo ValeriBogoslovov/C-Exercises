@@ -1,0 +1,62 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+/* Ангел и Борислава си купуват по една пица всеки ден след работа.
+Пицарията дава отстъпка от 20% за всяка втора пица
+Ангел изяжда своята пица и 1/3 от пицата на Борислава
+Двамата са се разбрали да споделат разходите за пиците на база какви са им заплатите и колко са изяли от пиците.
+Една пица струва 7 лв.
+Ангел взима 1800 лв заплата а Борислава 4000 лв заплата.
+По колко плащат А и Б
+Колко са платили общо в края на седмицата? */
+
+int main() {
+  cout << fixed << setprecision(2);
+
+  const double Angel_salary = 1800; //bgn
+  const double Borislava_salary = 4000; //bgn
+
+  double Angel_daily_pizza = 1;
+  double Borislava_daily_pizza = 1;
+  double one_pizza_pieces = 3;
+  double Angel_portion = 2 / one_pizza_pieces;
+  double Borislava_porion = 1 / one_pizza_pieces;
+
+  //cout << "Angel portion: " << Angel_portion << endl;
+  //cout << "Borislava portion: " << Borislava_porion << endl;
+
+  double difference_in_salary = Borislava_salary / Angel_salary;
+  cout << "Borislava and Angel salary difference is: " << difference_in_salary << " times" << endl;
+
+  double one_pizza_price = 7; //bgn
+  cout << "One pizza price: " << one_pizza_price << "lv" << endl;
+
+  double second_pizza_discount = 0.2; //20%
+  double second_pizza_price = one_pizza_price - (one_pizza_price * second_pizza_discount);
+  cout << "Second pizza price: " << second_pizza_price << "lv" << endl;
+
+  double daily_pizza_expense = one_pizza_price + second_pizza_price;
+  double weekly_pizza_expense = daily_pizza_expense * 5;
+
+  int daily_pizza_bought = Angel_daily_pizza + Borislava_daily_pizza;
+  int weekly_pizza_bought = daily_pizza_bought * 5;
+
+  double Angel_pizza_cost = daily_pizza_expense - (daily_pizza_expense * Borislava_porion); //based on pieces eaten
+  double Borislava_pizza_cost = daily_pizza_expense - (daily_pizza_expense * Angel_portion); //based on pieces eaten
+
+  cout << "Angel pizza cost based on pieces eaten: " << Angel_pizza_cost << "lv" << endl;
+  cout << "Borislava pizza cost based on pieces eaten: " << Borislava_pizza_cost << "lv" << endl;
+
+  double Angel_pizza_cost_on_salary = daily_pizza_expense - (Borislava_pizza_cost * difference_in_salary);
+  double Borislava_pizza_cost_on_salary = daily_pizza_expense - Angel_pizza_cost_on_salary;
+
+  cout << "Angel pizza cost based on salary difference: " << Angel_pizza_cost_on_salary << "lv" << endl;
+  cout << "Borislava pizza cost based on salary difference: " << Borislava_pizza_cost_on_salary << "lv" << endl;
+
+  cout << "Daily pizza expense for both: " << daily_pizza_expense << "lv" << endl;
+  cout << "Weekly pizza expense for both: " << weekly_pizza_expense << "lv" << endl;
+
+}
