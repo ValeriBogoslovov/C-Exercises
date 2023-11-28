@@ -208,6 +208,8 @@ int main()
   cout << "Please enter value for b(whole number): ";
   cin >> input_num_b;
 
+  // we will use switch statement to check the user input for the arithmetic operator and make the given operation
+  // in case the user enters invalid arithmetic operator, we print message on the console that the input is invalid
   switch (arithmetic_operator) {
     case '+': cout << input_num_a << " + " << input_num_b << " = " << input_num_a + input_num_b << endl << endl;
       break;
