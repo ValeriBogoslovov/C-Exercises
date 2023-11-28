@@ -1,6 +1,6 @@
 #include <iostream>
 
-// using this namespace, saves us of writing "std::" before each "cout"
+// using this namespace, saves us of writing "std::" before each "cout" and "endl"
 using namespace std;
 
 /* in this program we will use basic C++ variables like int and double,
