@@ -200,6 +200,12 @@ int main()
   cout << "Please enter valid arithmetic operator (+) for addition, (-) for subtraction, (*)for multiplication and (/) for division.";
   cin >> arithmetic_operator;
 
+  // validating that the user entered the correct arithmetic operator
+  if (arithmetic_operator != '+' || arithmetic_operator != '-' || arithmetic_operator != '*' || arithmetic_operator != '/') {
+    cout << "You entered the wrong arithmetic operator, please enter +, -, * or /! This is your last chance!";
+    cin >> arithmetic_operator;
+  }
+
   int input_num_a, input_num_b = 0; // initializing two variables
 
   cout << "Please enter value for a(whole number): ";
@@ -219,7 +225,7 @@ int main()
       break;
     case '*':  cout << input_num_a << " * " << input_num_b << " = " << input_num_a * input_num_b << endl << endl;
       break;
-    default: cout << "You entered invalid arithmetic operator. (facepalm)" << endl << endl;
+    default: cout << "Guess you entered the wrong operator, AGAIN!" << endl << endl;
       break;
   }
 
