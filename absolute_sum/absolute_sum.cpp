@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int getAbsSum(std::vector<int> arr) {
+int getAbsSum(vector<int> arr) {
 	int sum = 0;
 
 	for(auto num : arr) {
