@@ -5,6 +5,7 @@ using namespace std;
 // testing some pointer examples
 
 int main() {
+  /*
   int number = 5; // initializing variable with value of 5
   cout << "Variable value is: " << number << endl; //printing the value
   cout << "Address of variable is: " << &number << endl; // printing the address of the variable
@@ -26,6 +27,10 @@ int main() {
   cout << "Value of pointer is: " << *ptr << endl; // checking if the new value is assigned
   // You can see below that the value of the variable has changed, even though we haven't assigned it explicitly
   cout << "New value of variable is: " << number << endl;
-  cout << "Address of variable is: " << &number << endl;
+  cout << "Address of variable is: " << &number << endl; // Address is the same
+  */
+  // *************************** // remove /* */ to run code *******************************************************
+
+
   return 0;
 }
