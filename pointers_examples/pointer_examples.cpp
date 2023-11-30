@@ -4,7 +4,28 @@ using namespace std;
 
 // testing some pointer examples
 
+// ***************************** VOID POINTER FUNCTION ***************************************
+// this function will print the value of any type of variable that we pass
+// first parameter is the pointer variable and the second parameter is so we know what we are passing
+// the 'char char_of_variable' parameter can indicate the type of variable we are passing, for example
+// 'i' will be for int, 'c' will be for char, 'd' will be for double etc. this is user choice
+/*void print_ptr (void* ptr, char char_of_variable) {
+  // we have to check the char_of_variable and then handle the pointer variable
+  if (char_of_variable == 'i') {
+    // when we see that the character that we passed is 'i' we know that we have an integer
+    // note that this is the programmer logic, we can pass any character that we want and we can cast to any type
+    // we have to be very careful when doing such functions, because the program will compile but may run falsely
+    // to get the address of the pointer we need to cast it to the right type
+    cout << "Pointer type is integer, its address is: " << (int*)ptr << endl; // casting to int pointer and getting the address
+    cout << "Pointer value is: " << *((int*)ptr) << endl; // dereferencing the pointer as shown
+  } else if (char_of_variable == 'c') {
+    // we do the same for each type of variable we pass
+  }
+}*/ // remove /* */ to use function
+// *******************************************************************************************
+
 int main() {
+
   /*
   int number = 5; // initializing variable with value of 5
   cout << "Variable value is: " << number << endl; //printing the value
@@ -31,6 +52,9 @@ int main() {
   */
   // *************************** // remove /* */ to run code *******************************************************
 
-
+  // ************************************ VOID POINTER *************************************************************
+  //int number = 22;
+  //print_ptr(&number, 'i');
+  // ***************************************************************************************************************
   return 0;
 }
