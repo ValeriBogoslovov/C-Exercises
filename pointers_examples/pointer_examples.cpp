@@ -9,6 +9,7 @@ using namespace std;
 // first parameter is the pointer variable and the second parameter is so we know what we are passing
 // the 'char char_of_variable' parameter can indicate the type of variable we are passing, for example
 // 'i' will be for int, 'c' will be for char, 'd' will be for double etc. this is user choice
+
 /*void print_ptr (void* ptr, char char_of_variable) {
   // we have to check the char_of_variable and then handle the pointer variable
   if (char_of_variable == 'i') {
@@ -21,12 +22,16 @@ using namespace std;
   } else if (char_of_variable == 'c') {
     // we do the same for each type of variable we pass
   }
-}*/ // remove /* */ to use function
+}*/
+
+// remove /* */ to use function
+
 // *******************************************************************************************
 
 int main() {
 
   /*
+
   int number = 5; // initializing variable with value of 5
   cout << "Variable value is: " << number << endl; //printing the value
   cout << "Address of variable is: " << &number << endl; // printing the address of the variable
@@ -49,12 +54,16 @@ int main() {
   // You can see below that the value of the variable has changed, even though we haven't assigned it explicitly
   cout << "New value of variable is: " << number << endl;
   cout << "Address of variable is: " << &number << endl; // Address is the same
+
   */
+
   // *************************** // remove /* */ to run code *******************************************************
 
   // ************************************ VOID POINTER *************************************************************
+
   //int number = 22;
   //print_ptr(&number, 'i');
+
   // ***************************************************************************************************************
   return 0;
 }
