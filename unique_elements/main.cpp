@@ -25,18 +25,6 @@ int main()
 
     cout << endl;
 
-    #if __linux__
-        std::cout << "Hello, GNU/Linux!" << '\n';
-    #elif __FreeBSD__
-        std::cout << "Hello, FreeBSD!" << '\n';
-    #elif __APPLE__
-        std::cout << "Hello, macOS!" << '\n';
-    #elif _WIN32
-        system("pause");
-        //std::cout << "Hello, Windows!" << '\n';
-    #endif
-
-
     return 0;
 }
 
